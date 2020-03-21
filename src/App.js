@@ -98,7 +98,7 @@ const App = () => {
       <br />
       <div className="snippet ml-3">
         <SyntaxHighlighter language="json" style={railscasts}>
-          {JSON.stringify(inputFields.map(resultObj), null, 2)}
+          {JSON.stringify(inputFields.map(resultObj)[0], null, 2)}
         </SyntaxHighlighter>
       </div>
     </>
