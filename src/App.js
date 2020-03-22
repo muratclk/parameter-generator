@@ -13,10 +13,15 @@ const App = () => {
     const values = [...inputFields];
     if (event.target.name === "parameterName") {
       values[index].parameterName = event.target.value;
+    } else if (event.target.value === "object") {
+      console.log(values);
+      values[index].parameterType = { parameterName: "", parameterType: "" };
+    } else if (event.target.value === "array") {
+      //
+      values[index].parameterType = event.target.value;
     } else {
       values[index].parameterType = event.target.value;
     }
-
     setInputFields(values);
   };
 
